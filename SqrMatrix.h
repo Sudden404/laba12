@@ -40,7 +40,7 @@ public:
     void Multiply(SqrMatrix&, SqrMatrix&);
     void Multiply(SqrMatrix&,const int&);
     void Set(const int&,const int&,const double&);
-    void Div(SqrMatrix&, SqrMatrix&);
+    void Div(SqrMatrix&, SqrMatrix);
 };
 void inversion(double**,size_t);
 

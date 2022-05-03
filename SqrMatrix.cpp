@@ -141,7 +141,7 @@ void SqrMatrix::Multiply(SqrMatrix& a,const int& b){
         for (int j = 0; j < n; j++)
             matrix_add[i][j] = (a.matrix_add[i][j] * b);
 }
-void SqrMatrix::Div(SqrMatrix& a,SqrMatrix& b){
+void SqrMatrix::Div(SqrMatrix& a,SqrMatrix b){
     if (a.n != b.n){
         printf("Error,...");
         return;
