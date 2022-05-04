@@ -1,11 +1,6 @@
-//
-// Created by User on 02.05.2022.
-//
-
 #ifndef LABA12_SQRMATRIX_H
 #define LABA12_SQRMATRIX_H
 #include <iostream>
-
 
 class SqrMatrix {
 private:
@@ -25,9 +20,5 @@ public:
     void Set(const int&,const int&,const double&);
     void Div(SqrMatrix&, SqrMatrix&);
 };
-/*void inversion(double**, size_t);
-double Determinant(double**, size_t);
-void GetMatr(double**, double**, int i, int j, int m);
-void Print_mas(double**, int);*/
 
 #endif //LABA12_SQRMATRIX_H
