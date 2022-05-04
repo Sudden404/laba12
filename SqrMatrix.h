@@ -15,33 +15,19 @@ public:
     SqrMatrix(size_t n);
     SqrMatrix();
     ~SqrMatrix();
-    SqrMatrix& operator = (const SqrMatrix& a){
-        if(&a == this){
-            return *this;
-        }
-        for(int i = 0; i < n; i++)
-            delete[] matrix_add[i];
-        delete[] matrix_add;
-        n = a.n;
-
-        matrix_add = new double* [n];
-        for(int i = 0;i<n;i++)
-            matrix_add[i] = new double [n];
-
-        for(int i = 0; i < n; i++)
-            for(int j = 0; j < n; j++)
-                matrix_add[i][j] = a.matrix_add[i][j];
-
-        return *this;
-    }
-    void Print();
+    bool operator == (const SqrMatrix& a);
+    SqrMatrix& operator = (const SqrMatrix& a);
+    void Print() const;
     void Sum(SqrMatrix&, SqrMatrix&);
     void Sub(SqrMatrix&, SqrMatrix&);
     void Multiply(SqrMatrix&, SqrMatrix&);
     void Multiply(SqrMatrix&,const int&);
     void Set(const int&,const int&,const double&);
-    void Div(SqrMatrix&, SqrMatrix);
+    void Div(SqrMatrix&, SqrMatrix&);
 };
-void inversion(double**,size_t);
+/*void inversion(double**, size_t);
+double Determinant(double**, size_t);
+void GetMatr(double**, double**, int i, int j, int m);
+void Print_mas(double**, int);*/
 
 #endif //LABA12_SQRMATRIX_H

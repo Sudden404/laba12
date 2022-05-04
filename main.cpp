@@ -1,12 +1,13 @@
-
 #include "SqrMatrix.h"
+#include "my.lib.h"
 
 int main() {
     SqrMatrix a(3);
     SqrMatrix b(3);
-    b.Set(1, 1, 3.14);
-    b.Set(2, 2, 3.14);
-    b.Set(3, 3, 3.14);
+    for(int i = 1;i<4;i++)
+        for(int j = 1;j<4;j++)
+            b.Set(i,j,i+j);
+    b.Set(1,1,4);
     a.Set(1, 2, 9.82);
     a.Print();
     b.Print();
